@@ -1,4 +1,4 @@
-# Whering Product Catalog Tagger
+# Clothing Detection & Classification Pipeline
 
 A lightweight image processing pipeline for detecting, classifying, and extracting colour information from clothing items in images. Built for CPU-only execution with pre-trained models, optimised for speed whilst maintaining reasonable accuracy.
 
@@ -16,8 +16,8 @@ This pipeline processes fashion/clothing images through three stages:
 ### Installation
 ```bash
 # Create environment
-conda create -n whering python=3.14
-conda activate whering
+conda create -n clothing-tagger python=3.14
+conda activate wheclothing-taggerring
 
 # Install dependencies
 pip install -r requirements.txt
@@ -111,7 +111,7 @@ python src/visualise.py
 **Decision:** Use COCO-trained DETR detecting "person" regions  
 **Why:** Fashion-specific models (e.g., DeepFashion2-YOLO) had compatibility issues and DETR is known to be reliable and fast  
 **Trade-off:** Detections on product only are often missed as people are not included, however whole image classifications for product only are often sufficient
-**Production approach:** Deploy fashion-trained model with a large number of clothing categories - specific for our use case
+**Production approach:** Deploy fashion-trained model with a large number of clothing categories - specific to this domain.
 
 ### 2. Simple median colour
 **Decision:** Median RGB of central region  
